@@ -1,0 +1,22 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 9091
+spring:
+  application:
+    name: Employee-jpastreamer
+  datasource:
+    url: jdbc:postgresql://localhost:5432/microservicesproject
+    username: postgres
+    password: postgres
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+      show-sql: true
